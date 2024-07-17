@@ -1,0 +1,141 @@
+
+  body {
+    background: #333;
+    padding-top: 150px;
+  }
+  .container {
+    width: 100%;
+    max-width: 1345px;
+    min-width: 300px;
+    margin: 0 auto;
+  }
+  .cabecera{
+    background-color: #f80000;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+  }
+
+  .grid-container{
+    background-image: url(../img/entrada-con-arbol-de-navidad_00442432_2f72707f.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 10px;
+    margin-left: 20px;
+    
+
+  }
+
+  .regalo {
+    width: 220px;
+    margin: 0 auto;
+    cursor: pointer;
+  }
+  .caja, .tapa {
+    background:
+      -webkit-radial-gradient(white 10%, transparent 15.1%),
+      -webkit-radial-gradient(white 7%, transparent 15.1%),
+    #f80000;
+    background-position: 0 0, 25px 25px;
+    background-size: 50px 50px;
+    position: relative;
+    margin: 0 auto;
+  }
+  .caja {
+    width: 151px;
+    height: 144px;
+  }
+  .tapa {
+    width: 146px;
+    height: 70px;
+    box-shadow: 1px 2px 3px rgba(0,0,0,0.2);
+    z-index: 1;
+    padding: 0 2px;
+    background-color: #f80000;
+    /* transiciones */
+    top: 0;
+    left: 0;
+    transition: 
+      top ease-out 0.5s,
+      left ease-out 0.5s,
+      transform ease-out 0.5s;
+  }
+  .caja span, .tapa span {
+    position: absolute;
+    display: block;
+    background: rgba(239, 184, 16, 0.8);
+    box-shadow: 1px 2px 3px rgba(0,0,0,0.1);
+  }
+  
+  
+  .caja span:first-child {
+    width: 100%;
+    height: 27px;
+    top: 54px;
+  }
+  .caja span:last-child, .tapa span {
+    width: 36px;
+    height: 100%;
+    left: 56px;
+  }
+  .tapa span {
+    left: 56px;
+  }
+  .promo {
+    font-size: 30px;
+    color: white;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+    position: relative;
+    height: 0;
+    top: 10px;
+    transition: all ease-out 0.7s;
+  }
+  .promo p {
+    font-size: 24px;
+    margin: 0;
+  }
+  .promo h2 {
+    font-size: 29px;
+    margin: 0;
+  }
+  
+  /* Efecto hover */
+  .regalo:hover .tapa {
+    top: -100px;
+    transform: rotateZ(10deg);
+    left: 10px;
+  }
+  .regalo:hover .promo {
+    top: -95px;
+
+  }
+
+  .main-container {
+    display: flex;
+    align-items: flex-start; /* Alinea los elementos al inicio del contenedor */
+}
+
+.menu {
+    width: 200px; /* Ajusta el ancho según sea necesario */
+    background-color: #f8f8f8; /* Color de fondo opcional */
+    padding: 10px; /* Espaciado interno opcional */
+}
+
+.menu ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.menu li {
+    margin: 10px 0;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #000; /* Color del texto */
+}
