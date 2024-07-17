@@ -1,141 +1,253 @@
+body {
+  background: rgb(119, 38, 38);
+  margin-bottom: 60px; /* Espacio para el footer */
+  position: relative; /* Agregar posición relativa para el cuerpo */
+}
 
-  body {
-    background: #333;
-    padding-top: 150px;
-  }
-  .container {
-    width: 100%;
-    max-width: 1345px;
-    min-width: 300px;
-    margin: 0 auto;
-  }
-  .cabecera{
-    background-color: #f80000;
-    color: white;
-    text-align: center;
-    padding: 10px;
-    border-radius: 10px;
-    margin-bottom: 20px;
-  }
 
-  .grid-container{
-    background-image: url(../img/entrada-con-arbol-de-navidad_00442432_2f72707f.jpg);
-    background-size: cover;
-    background-attachment: fixed;
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    gap: 10px;
-    margin-left: 20px;
-    
 
-  }
-
-  .regalo {
-    width: 220px;
-    margin: 0 auto;
-    cursor: pointer;
-  }
-  .caja, .tapa {
-    background:
-      -webkit-radial-gradient(white 10%, transparent 15.1%),
-      -webkit-radial-gradient(white 7%, transparent 15.1%),
-    #f80000;
-    background-position: 0 0, 25px 25px;
-    background-size: 50px 50px;
-    position: relative;
-    margin: 0 auto;
-  }
-  .caja {
-    width: 151px;
-    height: 144px;
-  }
-  .tapa {
-    width: 146px;
-    height: 70px;
-    box-shadow: 1px 2px 3px rgba(0,0,0,0.2);
-    z-index: 1;
-    padding: 0 2px;
-    background-color: #f80000;
-    /* transiciones */
-    top: 0;
-    left: 0;
-    transition: 
-      top ease-out 0.5s,
-      left ease-out 0.5s,
-      transform ease-out 0.5s;
-  }
-  .caja span, .tapa span {
-    position: absolute;
-    display: block;
-    background: rgba(239, 184, 16, 0.8);
-    box-shadow: 1px 2px 3px rgba(0,0,0,0.1);
-  }
-  
-  
-  .caja span:first-child {
-    width: 100%;
-    height: 27px;
-    top: 54px;
-  }
-  .caja span:last-child, .tapa span {
-    width: 36px;
-    height: 100%;
-    left: 56px;
-  }
-  .tapa span {
-    left: 56px;
-  }
-  .promo {
-    font-size: 30px;
-    color: white;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    text-align: center;
-    position: relative;
-    height: 0;
-    top: 10px;
-    transition: all ease-out 0.7s;
-  }
-  .promo p {
-    font-size: 24px;
-    margin: 0;
-  }
-  .promo h2 {
-    font-size: 29px;
-    margin: 0;
-  }
-  
-  /* Efecto hover */
-  .regalo:hover .tapa {
-    top: -100px;
-    transform: rotateZ(10deg);
-    left: 10px;
-  }
-  .regalo:hover .promo {
-    top: -95px;
-
-  }
-
-  .main-container {
-    display: flex;
-    align-items: flex-start; /* Alinea los elementos al inicio del contenedor */
+.cabecera {
+  background-color: #f80000;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 20px;
 }
 
 .menu {
-    width: 200px; /* Ajusta el ancho según sea necesario */
-    background-color: #f8f8f8; /* Color de fondo opcional */
-    padding: 10px; /* Espaciado interno opcional */
+  width: 210px;
+  height: auto;
+  background-color: #f8f8f8;
+  padding: 10px;
+  
+  position: fixed; /* Fija el menú */
+  top: 160px; /* Distancia desde la parte superior */
+  left: 20px; /* Distancia desde el margen izquierdo */
+  overflow-y: auto; /* Añade scroll si es necesario */
+  z-index: 1000; /* Asegura que esté por encima de otros elementos */
 }
 
 .menu ul {
-    list-style-type: none;
-    padding: 0;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
 }
 
 .menu li {
-    margin: 10px 0;
+  margin: 10px 0;
+  background-color: red;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.menu li:hover {
+  opacity: 0.7;
 }
 
 .menu a {
-    text-decoration: none;
-    color: #000; /* Color del texto */
+  text-decoration: none;
+  color: #000;
+  font-size: large;
+  font-weight: bold;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  display: block;
+  padding: 0 20px;
+}
+
+.main-container {
+  margin-left: 240px; /* Ajusta el margen izquierdo para dejar espacio al menú */
+}
+
+.grid-container {
+  background-image: url(../img/imagen.webp);
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 10px;
+  margin-left: 20px;
+}
+
+.regalo {
+  width: 220px;
+  margin: 0 auto;
+  cursor: pointer;
+  padding: 50px;
+}
+
+.caja, .tapa {
+  background: -webkit-radial-gradient(white 10%, transparent 15.1%), -webkit-radial-gradient(white 7%, transparent 15.1%), #f80000;
+  background-position: 0 0, 25px 25px;
+  background-size: 50px 50px;
+  position: relative;
+  margin: 0 auto;
+}
+
+.caja {
+  width: 151px;
+  height: 144px;
+}
+
+.tapa {
+  width: 146px;
+  height: 70px;
+  box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  padding: 0 2px;
+  background-color: #f80000;
+  top: 0;
+  left: 0;
+  transition: top ease-out 0.5s, left ease-out 0.5s, transform ease-out 0.5s;
+}
+.regalo.regalo-1 .tapa {
+  background-color: #f80000; /* Color de la tapa para el primer regalo */
+}
+
+.regalo.regalo-1 .caja {
+  background: -webkit-radial-gradient(white 10%, transparent 15.1%), -webkit-radial-gradient(white 7%, transparent 15.1%), #f80000; /* Gradiente para la caja del primer regalo */
+}
+
+.regalo.regalo-2 .tapa {
+  background-color: #00ccff; /* Color de la tapa para el segundo regalo */
+}
+
+.regalo.regalo-2 .caja {
+  background: -webkit-radial-gradient(white 10%, transparent 15.1%), -webkit-radial-gradient(white 7%, transparent 15.1%), #00ccff; /* Gradiente para la caja del segundo regalo */
+}
+
+.regalo.regalo-3 .tapa {
+  background-color: #cc00ff; /* Color de la tapa para el tercer regalo */
+}
+
+.regalo.regalo-3 .caja {
+  background: -webkit-radial-gradient(white 10%, transparent 15.1%), -webkit-radial-gradient(white 7%, transparent 15.1%), #cc00ff; /* Gradiente para la caja del tercer regalo */
+}
+
+.regalo.regalo-4 .tapa {
+  background-color: #ff6600; /* Color de la tapa para el cuarto regalo */
+}
+
+.regalo.regalo-4 .caja {
+  background: -webkit-radial-gradient(white 10%, transparent 15.1%), -webkit-radial-gradient(white 7%, transparent 15.1%), #ff6600; /* Gradiente para la caja del cuarto regalo */
+}
+
+.caja span,
+.tapa span {
+  position: absolute;
+  display: block;
+  background: rgba(239, 184, 16, 0.8);
+  box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.1);
+}
+
+.caja span:first-child {
+  width: 100%;
+  height: 27px;
+  top: 54px;
+}
+
+.caja span:last-child,
+.tapa span {
+  width: 36px;
+  height: 100%;
+  left: 56px;
+}
+
+.tapa span {
+  left: 56px;
+}
+
+.promo {
+  font-size: 30px;
+  color: white;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  text-align: center;
+  position: relative;
+  height: 0;
+  top: 10px;
+  transition: all ease-out 0.7s;
+}
+
+.promo p {
+  font-size: 24px;
+  margin: 0;
+}
+
+.promo h2 {
+  font-size: 29px;
+  margin: 0;
+}
+
+.regalo:hover .tapa {
+  top: -100px;
+  transform: rotateZ(10deg);
+  left: 10px;
+}
+
+.regalo:hover .promo {
+  top: -95px;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  z-index: 999; /* Asegura que el footer esté por debajo del contenido principal */
+}
+.card-container {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  width: 400px;
+  height: 250px;
+  margin: 80px auto;
+  border-radius: 10px;
+  perspective: 1400px;
+}
+
+.card {
+  position: relative;
+  height: 100%;
+  border-radius: 10px;
+  width: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.8s;
+}
+
+.card:hover {
+  transform: rotateY(180deg);
+}
+
+.front, .back {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  justify-content: center;
+  align-items: center;
+  backface-visibility: hidden;
+}
+
+.front {
+  color: forestgreen;
+  background: #f80000;
+}
+
+.back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: rotateY(180deg);
+  color: #f80000;
+  background: forestgreen;
+  text-align: center;
 }
